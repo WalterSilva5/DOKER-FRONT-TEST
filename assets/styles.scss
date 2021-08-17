@@ -1,0 +1,237 @@
+$wsi-black: rgb(22, 22, 22);
+$wsi-black-light: rgb(35, 35, 35);
+$wsi-primary: rgba(#E05F00, 0.979);
+$wsi-primary-dark: rgba(#0BE07B, 0.979);
+$wsi-primary-light: rgba(248, 132, 66, 0.979);
+$wsi-success: blue;
+$wsi-secondary: #00b87a;
+$wsi-admin: rgb(7, 0, 75);
+$wsi-admin-light: #6278f3;
+$wsi-admin-dark: #12001a;
+$wsi-border-admin: 1px solid rgba($wsi-admin-light, .5);
+$wsi-border-primary: 1px solid rgba($wsi-secondary, .5);
+$wsi-shadow-light: 1px 1px 1px rgba(white, .5);
+$wsi-shadow-container: 3px 3px 3px rgba(red, .5);
+$wsi-shadow-primary: 1px 1px rgba($wsi-primary-dark, .5);
+$wsi-shadow-secondary: 2px 1px 3px rgba($wsi-secondary, .5);
+$wsi-shadow: 2px 2px 1px black;
+
+* {
+    user-select: none;
+    transition: 0.2s;
+
+    &:hover {
+        transition: 0.2s;
+    }
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+@mixin bg-light {
+    color: black;
+}
+
+@mixin bg-dark {
+    color: white;
+}
+
+/*colors*/
+.wsi-primary {
+    color: $wsi-primary;
+}
+
+
+.wsi-secondary {
+    color: $wsi-secondary;
+}
+
+.wsi-success {
+    color: $wsi-success;
+}
+
+.wsi-bg-success {
+    background-color: $wsi-success;
+}
+
+.wsi-bg-admin {
+    background-color: $wsi-admin;
+}
+
+.wsi-bg-admin-light {
+    background-color: $wsi-admin-light;
+}
+
+.wsi-bg-admin-dark {
+    background-color: $wsi-admin-dark;
+}
+
+.wsi-btn-admin {
+    background-color: $wsi-admin-light;
+    color: rgb(6, 0, 39);
+    box-shadow: $wsi-shadow-light;
+    transition: .5s;
+
+    &:hover {
+        color: white;
+        font-weight: bold;
+        background-color: $wsi-admin-dark;
+        transition: .5s;
+        box-shadow: $wsi-shadow-primary;
+    }
+}
+
+/*backgrounds*/
+.wsi-bg-black {
+    @include bg-dark;
+    background-color: $wsi-black;
+}
+
+.wsi-bg-black-light {
+    background-color: $wsi-black-light;
+}
+
+.wsi-bg-primary {
+    @include bg-dark;
+    background-color: $wsi-primary;
+
+    &:hover {
+        background-color: $wsi-primary-dark;
+    }
+
+    &:active {
+        background-color: $wsi-primary-light;
+    }
+}
+
+.wsi-bg-admin {
+    background-color: $wsi-admin;
+}
+
+.wsi-btn-secondary {
+    background-color: $wsi-secondary;
+
+    &:hover {
+        background-color: rgba($wsi-secondary, .8);
+    }
+}
+
+.wsi-btn-panel{
+    color: white;
+    text-align: left;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: rgba($wsi-admin-light, .2);
+    padding: 10px;
+    display: block;
+    &:hover {
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: rgba($wsi-admin-light, .5);
+        padding: 12px;
+    }
+}
+
+/*borders*/
+.wsi-border-primary {
+    border: $wsi-border-primary;
+}
+
+.wsi-border-container {
+    @extend .wsi-rounded;
+    border: $wsi-border-primary;
+}
+
+.wsi-border-admin {
+    border: $wsi-border-admin;
+}
+
+.wsi-rounded {
+    border-radius: 20px;
+}
+
+.wsi-shadow-light {
+    box-shadow: $wsi-shadow-light;
+
+    &:hover {
+        box-shadow: $wsi-shadow-primary;
+    }
+}
+
+.wsi-shadow-primary {
+    box-shadow: $wsi-shadow-light;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: $wsi-shadow-secondary;
+    }
+}
+
+.wsi-shadow-container {
+    box-shadow: $wsi-shadow-light;
+
+    &:hover {
+        box-shadow: $wsi-shadow-container;
+    }
+}
+
+.wsi-container {
+    width: 100%;
+}
+
+.wsi-container-dark {
+
+    background-color: $wsi-black-light;
+}
+
+.wsi-shadow {
+    box-shadow: $wsi-shadow;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-primary {
+    @extend .wsi-bg-primary;
+    border: none;
+}
+
+.wsi-btn-lg {
+    min-height: 70px;
+    font-size: 1.5em;
+}
+
+.form-control-lg {
+    font-size: 1.5em;
+    min-height: 80px;
+}
+
+.align-center {
+    display: flexbox;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.nm {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.np {
+    padding: 0 !important;
+}
+
+
+.icon-panel{
+    filter: invert(1);
+    width: 25px;
+    margin-right: 10px;
+}

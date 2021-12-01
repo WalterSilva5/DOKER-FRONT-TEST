@@ -1,4 +1,3 @@
-import React from 'react';
 import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
 import { serverAdders } from './util/settings';

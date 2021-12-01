@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+/* eslint-disable import/no-extraneous-dependencies */
+import { defineConfig } from 'vite';
+import react from 'vite-preset-react';
+import reactRefresh from '@vitejs/plugin-react-refresh';
 
-// https://vitejs.dev/config/
 const path = require('path');
 
 export default defineConfig({
@@ -17,4 +18,6 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, '/src') }],
   },
+  //basedir
+  base: '/',
 });

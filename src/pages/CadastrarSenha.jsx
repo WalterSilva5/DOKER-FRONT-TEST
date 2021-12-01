@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import { checkSenhaIgual } from '@/util/funcoes';
 import DokerAlert from '@/components/DokerAlert';

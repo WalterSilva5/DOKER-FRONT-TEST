@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 //import rect router
 import { BrowserRouter } from 'react-router-dom'
